@@ -12,15 +12,17 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ContentComponent } from "./components/content/content.component";
 import { FooterComponent } from './components/footer/footer.component';
 import { PageContainerComponent } from "./components/page-container/page-container.component";
+import { BreadcrumbComponent } from "./components/breadcrumb/breadcrumb.component";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Ejercicio03Component, Ejercicio04Component, Ejercicio05Component, Ejercicio06Component,
-    MainContentComponent, NavbarComponent, SidebarComponent, ContentComponent, FooterComponent, PageContainerComponent],
+  imports: [RouterOutlet, CommonModule, Ejercicio01Component,Ejercicio02Component,Ejercicio03Component, Ejercicio04Component, Ejercicio05Component, Ejercicio06Component,
+    MainContentComponent, NavbarComponent, SidebarComponent, ContentComponent, FooterComponent, PageContainerComponent, BreadcrumbComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'ManualEjercicios_Angular_230166';
+  title = 'ManualEjercicios_Angular_230166';  
 }
