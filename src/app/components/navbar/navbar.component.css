@@ -1,4 +1,33 @@
-.nav{
-background-color: blueviolet;
-    
-}
+nav {
+    background-color: #2563eb; /* Azul Tailwind bg-blue-600 */
+    color: white;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+  }
+  
+  nav div {
+    font-size: 1.125rem; /* text-lg */
+    font-weight: bold;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 16px; /* space-x-4 */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: text-decoration 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline; /* hover:underline */
+  }
+  

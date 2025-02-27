@@ -1,39 +1,61 @@
-/* ejercicio-06.component.css */
+.parent {
+  display: grid;
+  grid-template-columns: 16rem auto; /* Sidebar fijo y contenido flexible */
+  grid-template-rows: auto 1fr auto; /* Se agrega una fila para el footer */
+  height: 100vh; /* Ocupa toda la pantalla */
+  overflow: hidden;
+}
 
-/* Estilo para el área editable */
-div[contentEditable] {
-    border: 1px solid #ccc;
-    padding: 20px;
-    min-height: 100px;
-    margin-bottom: 10px;
-    background: linear-gradient(135deg, #e0f7fa, #ffffff);  /* Fondo degradado suave */
-    border-radius: 8px;  /* Bordes redondeados */
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-  }
-  
-  /* Estilo para el botón */
-  button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 4px;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  /* Fondo general de la página */
-  :host {
-    display: block;
-    background: #00b3cb;  /* Fondo claro con un color suave */
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 10000px;
-    margin: 50px auto;
-  }
-  
+.navbar, .footer {
+  grid-column: span 2;
+  background-color: #2563eb; /* Azul para navbar */
+  color: white;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar {
+  top: 0;
+}
+
+.footer {
+  bottom: 0;
+  background-color: #111827; /* Gris oscuro para el footer */
+  text-align: center;
+}
+
+.sidebar {
+  background-color: #1e293b; /* Azul oscuro (Sidebar) */
+  color: white;
+  padding: 1rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 16rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.content {
+  background-color: #f3f4f6; /* Gris claro (Contenido principal) */
+  padding: 1.5rem;
+  width: 100%;
+  margin-left: 16rem; /* Espacio para el sidebar */
+  margin-top: 4rem; /* Espacio para navbar */
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* Clases ocultas */
+.hidden-navbar {
+  transform: translateY(-100%);
+}
+
+.hidden-footer {
+  transform: translateY(100%);
+}
+
+.hidden-sidebar {
+  transform: translateX(-100%);
+}
