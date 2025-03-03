@@ -14,6 +14,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PageContainerComponent } from "./components/page-container/page-container.component";
 import { BreadcrumbComponent } from "./components/breadcrumb/breadcrumb.component";
 import { CommonModule } from '@angular/common';
+import { LoginComponent } from './login/login.component';
 
 @Component({
   selector: 'app-root',
